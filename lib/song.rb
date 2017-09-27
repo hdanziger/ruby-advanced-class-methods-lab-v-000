@@ -6,8 +6,8 @@ class Song
     @@all
   end
 
-  def song.create
-    @@all << song.new
+  def Song.create
+    @@all << Song.new
     song.all
   end
 
