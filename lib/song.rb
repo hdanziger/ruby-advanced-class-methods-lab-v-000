@@ -37,6 +37,10 @@ class Song
     self.find_by_name(song_name) || self.create_by_name(song_name)
   end
 
+  def self.alphabetical
+    @@all.sort_by(a-z)
+  end
+
   def self.new_from_filename(file_name)
     parts = file_name.split(" - ")
     artist_name = parts[0]
