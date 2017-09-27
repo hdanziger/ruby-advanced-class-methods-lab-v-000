@@ -6,11 +6,6 @@ class Song
     @@all
   end
 
-  def self.create
-    song = Song.create
-    song.save
-    song
-  end
 
   def save
     self.class.all << self
