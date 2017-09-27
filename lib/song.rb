@@ -37,4 +37,12 @@ class Song
     self.find_by_name(song_name) || self.create_by_name(song_name)
   end
 
+  def self.new_from_filename(file_name)
+    parts = file_name.split("-")
+    parts[0] = artist_name
+    parts[1]= song_name + ".mp3"
+  end
+
+
+
 end
